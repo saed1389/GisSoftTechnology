@@ -7,11 +7,13 @@ use App\Filament\Resources\BlogResource\RelationManagers;
 use App\Models\Blog;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class BlogResource extends Resource
 {
@@ -23,26 +25,52 @@ class BlogResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('category_id')
-                    ->required()
-                    ->numeric(),
                 Forms\Components\TextInput::make('title')
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (string $operation, $state, Set $set) {
+                        if ($operation !== 'create') {
+                            return;
+                        }
+                        $set('slug', Str::slug($state));
+                    })
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
                     ->required()
+                    ->disabled()
+                    ->dehydrated()
+                    ->unique(Blog::class, 'slug', ignoreRecord: true)
                     ->maxLength(255),
                 Forms\Components\TextInput::make('title_en')
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\Select::make('category_id')
+                    ->label('Category')
+                    ->required()
+                    ->searchable()
+                    ->preload()
+                    ->relationship('category', 'title'),
+                Forms\Components\MarkdownEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('description_en')
+                Forms\Components\MarkdownEditor::make('description_en')
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('writer')
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
-                    ->image(),
+                    ->directory('uploads/gissofttechnology')
+                    ->reorderable()
+                    ->image()
+                    ->hintColor('danger')
+                    ->imageEditor()
+                    ->disk('public')
+                    ->visibility('public')
+                    ->imageEditorViewportWidth('900')
+                    ->imageEditorViewportHeight('500')
+                    ->panelLayout('grid')
+                    ->columns(3)
+                    ->columnSpan('full')
+                    ->required()
+                    ->columnSpanFull(),
                 Forms\Components\Toggle::make('status')
                     ->required(),
             ]);
@@ -52,25 +80,10 @@ class BlogResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('category_id')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('title_en')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('writer')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\IconColumn::make('status')
-                    ->boolean(),
+                Tables\Columns\ToggleColumn::make('status'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -79,7 +92,10 @@ class BlogResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make()->label('Edit'),
+                    Tables\Actions\DeleteAction::make()->label('Delete'),
+                ])
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

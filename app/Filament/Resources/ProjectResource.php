@@ -7,11 +7,13 @@ use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class ProjectResource extends Resource
 {
@@ -23,19 +25,45 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('category_id')
-                    ->required()
-                    ->numeric(),
                 Forms\Components\TextInput::make('title')
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (string $operation, $state, Set $set) {
+                        if ($operation !== 'create') {
+                            return;
+                        }
+                        $set('slug', Str::slug($state));
+                    })
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
                     ->required()
+                    ->disabled()
+                    ->dehydrated()
+                    ->unique(Project::class, 'slug', ignoreRecord: true)
                     ->maxLength(255),
                 Forms\Components\TextInput::make('title_en')
                     ->maxLength(255),
+                Forms\Components\Select::make('category_id')
+                    ->label('Category')
+                    ->required()
+                    ->searchable()
+                    ->preload()
+                    ->relationship('category', 'title'),
                 Forms\Components\FileUpload::make('image')
-                    ->image(),
+                    ->directory('uploads/gissofttechnology')
+                    ->reorderable()
+                    ->image()
+                    ->hintColor('danger')
+                    ->imageEditor()
+                    ->disk('public')
+                    ->visibility('public')
+                    ->imageEditorViewportWidth('900')
+                    ->imageEditorViewportHeight('500')
+                    ->panelLayout('grid')
+                    ->columns(3)
+                    ->columnSpan('full')
+                    ->required()
+                    ->columnSpanFull(),
             ]);
     }
 
