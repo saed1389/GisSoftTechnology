@@ -1,6 +1,4 @@
 <div>
-
-    @livewire('partials.header')
     @livewire('partials.home')
     @livewire('partials.services')
     <section class="gradient-bg2" id="counters">

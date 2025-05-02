@@ -37,4 +37,6 @@ return [
     'subject' => 'Konu',
     'message' => 'Mesaj',
     'send message' => 'Mesaj Gönder',
+    'Popular Post' => 'Popüler Yazı',
+    'Topics' => 'Konular'
 ];

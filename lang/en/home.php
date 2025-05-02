@@ -37,4 +37,7 @@ return [
     'subject' => 'Subject',
     'message' => 'Message',
     'send message' => 'Send Message',
+    'Popular Post' => 'Popular Post',
+    'Topics' => 'Topics',
+
 ];

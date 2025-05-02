@@ -25,6 +25,7 @@
 <div class="cd-transition-layer visible opening">
     <div class="bg-layer"></div>
 </div>
+@livewire('partials.header')
 {{ $slot }}
 <div id="aimated-cursor">
     <div id="cursor">
