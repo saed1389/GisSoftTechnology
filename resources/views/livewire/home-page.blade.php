@@ -40,21 +40,7 @@
     </section>
     @livewire('partials.projects')
     @livewire('partials.blogs')
-    <section class="gradient-bg2" id="client">
-        <h2 class="d-none">hidden</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel partners-slider">
-                        <div class="logo-item"><img alt="client-logo" src="{{ asset('front/agency/img/client-1.png') }}"></div>
-                        <div class="logo-item"><img alt="client-logo" src="{{ asset('front/agency/img/client-2.png') }}"></div>
-                        <div class="logo-item"><img alt="client-logo" src="{{ asset('front/agency/img/client-3.png') }}"></div>
-                        <div class="logo-item"><img alt="client-logo" src="{{ asset('front/agency/img/client-4.png') }}"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @livewire('partials.clients')
     <section class="contact-us" id="contact">
         <div class="container">
             <div class="row align-items-top">

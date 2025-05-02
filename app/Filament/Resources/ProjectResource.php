@@ -57,8 +57,6 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->disk('public')
                     ->visibility('public')
-                    ->imageEditorViewportWidth('900')
-                    ->imageEditorViewportHeight('500')
                     ->panelLayout('grid')
                     ->columns(3)
                     ->columnSpan('full')
