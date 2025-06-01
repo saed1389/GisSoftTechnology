@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta name="author" content="Coderthemes">
-    <meta name="description" content="MegaOne is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template with 8 ready home page demos.">
-    <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, faq">
-    <title>Agency | MegaOne HTML5 Template</title>
+    <meta name="author" content="Gis Soft Technology">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Gis Soft Technology</title>
     <link href="{{ asset('front/agency/img/favicon.ico') }}" rel="icon">
     <link href="{{ asset('front/vendor/css/bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('front/vendor/css/revolution-settings.min.css') }}" rel="stylesheet">
