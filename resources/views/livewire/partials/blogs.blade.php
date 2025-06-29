@@ -14,7 +14,7 @@
                     @foreach($blogs as $blog)
                         <div class="col-lg-4">
                             <div class="news-item">
-                                <img alt="image" class="news-img" src="{{ asset($blog->image) }}">
+                                <img alt="image" class="news-img" src="{{ asset($blog->image) }}" loading="lazy">
                                 <div class="news-text-box">
                                     <span class="date main-color">
                                         {{ app()->getLocale() == 'tr'

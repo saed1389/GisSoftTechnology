@@ -20,7 +20,7 @@
                 <div class="col-lg-8">
                     <article class="blog-classic">
                         <div class="post-thumbnail">
-                            <img src="{{ $blog->image }}" alt="{{ app()->getLocale() == 'tr' ? $blog->title : $blog->title_en }}">
+                            <img src="{{ $blog->image }}" alt="{{ app()->getLocale() == 'tr' ? $blog->title : $blog->title_en }}" loading="lazy">
                         </div>
                         <div class="post-details alt-font">
 
@@ -72,7 +72,7 @@
                                     <li>
                                         <figure>
                                             <a href="{{ route('blog.detail', $related_blog->slug) }}">
-                                                <img width="150" height="150" src="{{ $related_blog->image }}" class="attachment-thumbnail" alt="{{ app()->getLocale() == 'tr' ? $related_blog->title : $related_blog->title_en }}">
+                                                <img width="150" height="150" src="{{ $related_blog->image }}" class="attachment-thumbnail" alt="{{ app()->getLocale() == 'tr' ? $related_blog->title : $related_blog->title_en }}" loading="lazy">
                                             </a>
                                         </figure>
                                         <div class="post-head">
@@ -86,9 +86,6 @@
                                 @endforeach
                             </ul>
                         </aside>
-
-                        {{--<aside class="widget widget_media_image"><a href="javascript:void(0);"><img src="img/advertisment.jpg" class="add-image" alt="image"></a></aside>--}}
-
                     </div>
                 </div>
             </div>

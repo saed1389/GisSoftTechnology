@@ -26,7 +26,7 @@
                                 <div class="cbp-item {{ $project->project->slug }}">
                                     <a class="cbp-caption cbp-lightbox" href="{{ asset($project->image)}}">
                                         <div class="cbp-caption-defaultWrap">
-                                            <img alt="port-{{ $loop->index + 1 }}" src="{{ asset($project->image)}}">
+                                            <img alt="port-{{ $loop->index + 1 }}" src="{{ asset($project->image)}}" loading="lazy">
                                         </div>
                                         <div class="cbp-caption-activeWrap"></div>
                                         <div class="cbp-l-caption-alignCenter center-block">

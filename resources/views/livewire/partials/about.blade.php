@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeInRight">
                     <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                        <img alt="vector" src="{{ asset('front/agency/img/vector-art-2.png')}}">
+                        <img alt="vector" src="{{ asset('front/agency/img/vector-art-2.png')}}" loading="lazy">
                     </div>
                 </div>
             </div>

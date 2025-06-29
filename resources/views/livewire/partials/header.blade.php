@@ -3,7 +3,7 @@
         <nav class="navbar navbar-top-default navbar-expand-lg navbar-gradient nav-icon alt-font">
             <div class="container">
                 <a class="logo link scroll" href="javascript:void(0)" title="Logo">
-                    <img alt="logo" class="logo-dark default" src="{{ asset('front/agency/img/logo.png') }}">
+                    <img alt="logo" class="logo-dark default" src="{{ asset('front/agency/img/logo.png') }}" loading="lazy">
                 </a>
                 <div class="collapse navbar-collapse" id="agency">
                     <div class="navbar-nav ml-auto">
@@ -14,7 +14,7 @@
                         <a class="nav-link link scroll" href="#contact">{{ __('home.Contact Us') }}</a>
                         <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                     </div>
-                    <a class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3" style="display: {{ app()->getLocale() == 'tr' ? 'none' : 'block' }}" href="{{ url('/change-locale/tr') }}"><img style="width: 32px;" src="{{ asset('front/agency/img/tr-flag.png') }}" alt="">
+                    <a class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3" style="display: {{ app()->getLocale() == 'tr' ? 'none' : 'block' }}" href="{{ url('/change-locale/tr') }}"><img style="width: 32px;" src="{{ asset('front/agency/img/tr-flag.png') }}" alt="" loading="lazy">
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -24,7 +24,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3" style="display: {{ app()->getLocale() == 'en' ? 'none' : 'block' }}" href="{{ url('/change-locale/en') }}"><img style="width: 32px;" src="{{ asset('front/agency/img/uk-flag.png') }}" alt="">
+                    <a class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3" style="display: {{ app()->getLocale() == 'en' ? 'none' : 'block' }}" href="{{ url('/change-locale/en') }}"><img style="width: 32px;" src="{{ asset('front/agency/img/uk-flag.png') }}" alt="" loading="lazy">
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -105,7 +105,7 @@
                         </ul>
                         <span class="full-menu-dot" style="transform: scale(0);"></span>
                     </nav>
-                    <img alt="shape" src="{{ asset('front/agency/img/shape-8.png') }}">
+                    <img alt="shape" src="{{ asset('front/agency/img/shape-8.png') }}" loading="lazy">
                 </div>
                 <div class="shape-right">
                     <div class="full-menu-detail hide-cursor">
@@ -114,7 +114,7 @@
                         <p><i class="fas fa-mobile-alt"></i><a href="tel:+905355186985">+90 535 518 6985</a></p>
                         <p><i class="fas fa-envelope"></i><a href="mailto:contact@gissofttechnology.com">contact@gissofttechnology.com</a></p>
                     </div>
-                    <img alt="shape" src="{{ asset('front/agency/img/shape-7.png') }}">
+                    <img alt="shape" src="{{ asset('front/agency/img/shape-7.png') }}" loading="lazy">
                 </div>
             </div>
         </div>

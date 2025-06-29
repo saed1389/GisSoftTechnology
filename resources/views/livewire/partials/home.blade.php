@@ -28,7 +28,7 @@
                              id="slide-43-layer-5"
                              style="z-index: 7;">
                             <div class="rs-looped rs-slideloop" data-easing="" data-speed="5" data-xe="0" data-xs="0" data-ye="15" data-ys="-15">
-                                <img alt="" data-hh="['87px','87px','87px','87px']" data-no-retina data-ww="['44px','44px','44px','44px']" src="{{ asset('front/agency/img/shape-6.png') }}">
+                                <img alt="Gis Soft Technology" data-hh="['87px','87px','87px','87px']" data-no-retina data-ww="['44px','44px','44px','44px']" src="{{ asset('front/agency/img/shape-6.png') }}" loading="lazy">
                             </div>
                         </div>
                         <div class="tp-caption   tp-resizeme"
@@ -49,7 +49,7 @@
                              id="slide-43-layer-6"
                              style="z-index: 8;">
                             <div class="rs-looped rs-slideloop" data-easing="Power0.easeIn" data-speed="5" data-xe="0" data-xs="0" data-ye="20" data-ys="0">
-                                <img alt="" data-hh="['87px','87px','87px','87px']" data-no-retina data-ww="['24px','24px','24px','24px']" src="{{ asset('front/agency/img/shape-5.png') }}"></div>
+                                <img alt="Gis Soft Technology" data-hh="['87px','87px','87px','87px']" data-no-retina data-ww="['24px','24px','24px','24px']" src="{{ asset('front/agency/img/shape-5.png') }}" loading="lazy"></div>
                         </div>
                         <div class="tp-caption   tp-resizeme"
                              data-fontsize="['20','20','20','20']"
@@ -69,7 +69,7 @@
                              id="slide-43-layer-7"
                              style="z-index: 9;">
                             <div class="rs-looped rs-wave" data-angle="0" data-origin="50% 50%" data-radius="15px" data-speed="12">
-                                <img alt="" data-hh="['67px','67px','67px','67px']" data-no-retina data-ww="['68px','68px','68px','68px']" src="{{ asset('front/agency/img/shape-4.png')}}"></div>
+                                <img alt="Gis Soft Technology" data-hh="['67px','67px','67px','67px']" data-no-retina data-ww="['68px','68px','68px','68px']" src="{{ asset('front/agency/img/shape-4.png')}}" loading="lazy"></div>
                         </div>
                         <div class="tp-caption   tp-resizeme"
                              data-frames='[{"delay":190,"speed":500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
@@ -88,7 +88,7 @@
                              id="slide-43-layer-8"
                              style="z-index: 10;">
                             <div class="rs-looped rs-rotate" data-easing="Power0.easeIn" data-enddeg="360" data-origin="50% 50%" data-speed="15" data-startdeg="0">
-                                <img alt="" data-hh="['69px','69px','69px','69px']" data-no-retina data-ww="['67px','67px','67px','67px']" src="{{ asset('front/agency/img/shape-3.png')}}"></div>
+                                <img alt="Gis Soft Technology" data-hh="['69px','69px','69px','69px']" data-no-retina data-ww="['67px','67px','67px','67px']" src="{{ asset('front/agency/img/shape-3.png')}}" loading="lazy"></div>
                         </div>
                         <div class="tp-caption   tp-resizeme"
                              data-frames='[{"delay":190,"speed":500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
@@ -107,7 +107,7 @@
                              id="slide-43-layer-9"
                              style="z-index: 11;">
                             <div class="rs-looped rs-pendulum" data-easing="" data-enddeg="20" data-origin="50% 50%" data-speed="12" data-startdeg="-20">
-                                <img alt="" data-hh="['52px','52px','52px','52px']" data-no-retina data-ww="['51px','51px','51px','51px']" src="{{ asset('front/agency/img/shape-1.png')}}"></div>
+                                <img alt="Gis Soft Technology" data-hh="['52px','52px','52px','52px']" data-no-retina data-ww="['51px','51px','51px','51px']" src="{{ asset('front/agency/img/shape-1.png')}}" loading="lazy"></div>
                         </div>
                         <div class="tp-caption   tp-resizeme"
                              data-basealign="slide"
@@ -127,7 +127,7 @@
                              id="slide-43-layer-10"
                              style="z-index: 12;">
                             <div class="rs-looped rs-slideloop" data-easing="" data-speed="2" data-xe="15" data-xs="0" data-ye="0" data-ys="0">
-                                <img alt="" data-hh="['14px','14px','14px','14px']" data-no-retina data-ww="['50px','50px','50px','50px']" src="{{ asset('front/agency/img/shape-2.png')}}"></div>
+                                <img alt="Gis Soft Technology" data-hh="['14px','14px','14px','14px']" data-no-retina data-ww="['50px','50px','50px','50px']" src="{{ asset('front/agency/img/shape-2.png')}}" loading="lazy"></div>
                         </div>
                         <div class="tp-caption tp-resizeme gradient-text1"
                              data-fontsize="['70','65','60','50']"
@@ -206,7 +206,7 @@
                              id="slide-43-layer-16"
                              style="z-index: 17;">
                             <div class="rs-looped rs-slideloop" data-easing="" data-speed="5" data-xe="15" data-xs="-10" data-ye="0" data-ys="0">
-                                <img alt="" data-hh="['604px','510','510','510']" data-no-retina data-ww="['434px','350','350','350']" src="{{ asset('front/agency/img/vector-art-1.png')}}"></div>
+                                <img alt="Gis Soft Technology" data-hh="['604px','510','510','510']" data-no-retina data-ww="['434px','350','350','350']" src="{{ asset('front/agency/img/vector-art-1.png')}}" loading="lazy"></div>
                         </div>
                         <div class="tp-caption tp-resizeme hide-cursor"
                              data-actions='[{"event":"click","action":"scrollbelow","offset":"-50px","delay":"","speed":"1200","ease":"Power3.easeInOut"}]'

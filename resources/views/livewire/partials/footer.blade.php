@@ -39,8 +39,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-md-right">
-                    <p class="company-about fadeIn">&copy; {{ date('Y') }}. <a href="/">Gis Soft Technology</a>
-                    </p>
+                    <p class="company-about fadeIn">&copy; {{ date('Y') }}. <a href="/">Gis Soft Technology</a></p>
                 </div>
             </div>
         </div>
