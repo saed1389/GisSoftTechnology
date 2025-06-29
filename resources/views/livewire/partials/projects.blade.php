@@ -23,7 +23,7 @@
                         </div>
                         <div class="cbp cbp-l-grid-mosaic-flat" id="js-grid-mosaic-flat">
                             @foreach($projects as $project)
-                                <div class="cbp-item {{ $project->project->slug }}">
+                                <div class="cbp-item {{ $project->category->slug }}">
                                     <a class="cbp-caption cbp-lightbox" href="{{ asset($project->image)}}">
                                         <div class="cbp-caption-defaultWrap">
                                             <img alt="port-{{ $loop->index + 1 }}" src="{{ asset($project->image)}}" loading="lazy">
